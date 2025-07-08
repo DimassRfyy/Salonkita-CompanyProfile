@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SalonKita - Transforming Women Through Beauty</title>
+    <title>SalonKita - Transforming Unemployed Women</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Avenir Next Rounded Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -23,7 +23,10 @@
                         'primary-dark': '#9A1F6B'
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                        'sans': ['Nunito', 'system-ui', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'container': '1200px'
                     }
                 }
             }
@@ -42,115 +45,190 @@
             background-clip: text;
         }
         
-        .mobile-menu {
+        .sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .sidebar.active {
+            transform: translateX(0);
+        }
+        
+        .overlay {
             display: none;
         }
         
-        .mobile-menu.active {
+        .overlay.active {
             display: block;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('assets/gallery4.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Navbar scroll effects */
+        .navbar-transparent {
+            background: transparent;
+            backdrop-filter: none;
+            border-bottom: none;
+        }
+        
+        .navbar-transparent .nav-link {
+            color: white;
+        }
+        
+        .navbar-transparent .nav-link:hover {
+            color: #B72780;
+        }
+        
+        .navbar-transparent .logo-text {
+            color: white;
+        }
+        
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 1);
+        }
+        
+        .navbar-scrolled .nav-link {
+            color: #4B5563;
+        }
+        
+        .navbar-scrolled .nav-link:hover {
+            color: #B72780;
+        }
+        
+        .navbar-scrolled .logo-text {
+            color: #111827;
         }
     </style>
 </head>
 <body class="min-h-screen bg-white font-sans">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <nav id="navbar" class="navbar-transparent fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-container mx-auto px-4 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" 
-                     alt="Salonkita Logo" class="w-10 h-10 rounded-lg object-cover">
-                <span class="text-2xl font-bold text-gray-900">SalonKita</span>
+                <img src="assets/logo.png" 
+                     alt="Salonkita Logo" class="w-20 h-20 rounded-lg object-cover">
             </div>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
-                <a href="#impact" class="text-gray-600 hover:text-primary transition-colors">Impact</a>
-                <a href="#products" class="text-gray-600 hover:text-primary transition-colors">Products</a>
-                <a href="#team" class="text-gray-600 hover:text-primary transition-colors">Team</a>
+                <a href="#about" class="nav-link transition-colors duration-300">About</a>
+                <a href="#why-beauty" class="nav-link transition-colors duration-300">Why Beauty</a>
+                <a href="#impact" class="nav-link transition-colors duration-300">Impact</a>
+                <a href="#products" class="nav-link transition-colors duration-300">Products</a>
+                <a href="#team" class="nav-link transition-colors duration-300">Team</a>
                 <button class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg transition-colors">
                     Join Us
                 </button>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden" onclick="toggleMobileMenu()">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+            <button class="md:hidden" onclick="toggleSidebar()">
+                <i data-lucide="menu" class="w-6 h-6 nav-link"></i>
             </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-100">
-            <div class="px-4 py-4 space-y-4">
-                <a href="#about" class="block text-gray-600 hover:text-primary transition-colors">About</a>
-                <a href="#impact" class="block text-gray-600 hover:text-primary transition-colors">Impact</a>
-                <a href="#products" class="block text-gray-600 hover:text-primary transition-colors">Products</a>
-                <a href="#team" class="block text-gray-600 hover:text-primary transition-colors">Team</a>
-                <button class="w-full bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg transition-colors">
-                    Join Us
-                </button>
-            </div>
         </div>
     </nav>
 
-    <!-- Main Banner -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-white to-pink-50">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="space-y-4">
-                        <span class="inline-block bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-medium">
-                            Empowering Women Through Beauty
-                        </span>
-                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                            Transforming unemployed women 
-                            <span class="text-primary">into skilled beauty professionals</span>
-                        </h1>
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            Through trainings and providing employment opportunities in Indonesia's growing beauty industry
-                        </p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                            Start Your Journey
-                        </button>
-                        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                            Learn More
-                        </button>
-                    </div>
+    <!-- Mobile Sidebar -->
+    <div id="overlay" class="overlay fixed inset-0 bg-black bg-opacity-50 z-40" onclick="closeSidebar()"></div>
+    <div id="sidebar" class="sidebar fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center space-x-2">
+                    <img src="assets/logo.png" 
+                         alt="Salonkita Logo" class="w-20 h-20 rounded-lg object-cover">
                 </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Beauty professional at work" class="rounded-2xl shadow-2xl w-full">
+                <button onclick="closeSidebar()">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-6">
+                <a href="#about" class="block text-lg text-gray-600 hover:text-primary transition-colors" onclick="closeSidebar()">About</a>
+                <a href="#why-beauty" class="block text-lg text-gray-600 hover:text-primary transition-colors" onclick="closeSidebar()">Why Beauty</a>
+                <a href="#impact" class="block text-lg text-gray-600 hover:text-primary transition-colors" onclick="closeSidebar()">Impact</a>
+                <a href="#products" class="block text-lg text-gray-600 hover:text-primary transition-colors" onclick="closeSidebar()">Products</a>
+                <a href="#team" class="block text-lg text-gray-600 hover:text-primary transition-colors" onclick="closeSidebar()">Team</a>
+                <button class="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition-colors text-lg">
+                    Join Us
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Banner - Fullscreen -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="relative z-10 text-center text-white px-4 mt-20">
+            <div class="max-w-5xl mx-auto space-y-8">
+                <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full text-lg font-medium">
+                    Empowering Women Through Beauty
+                </span>
+                <h1 class="text-6xl lg:text-8xl font-bold leading-tight">
+                    Transforming unemployed women
+                </h1>
+                <p class="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
+                    Through comprehensive training and employment opportunities in Indonesia's growing beauty industry
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                    <button class="bg-white text-primary hover:bg-gray-100 px-10 py-4 rounded-lg text-xl font-semibold transition-colors">
+                        Start Your Journey
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 rounded-lg text-xl font-semibold transition-colors">
+                        Learn More
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Traction Stats -->
-    <section class="py-16 bg-primary">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
-                <div class="space-y-2">
-                    <div class="text-4xl font-bold">58,000+</div>
-                    <div class="text-pink-100">Transactions</div>
+    <section class="py-20 bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-4">
+                    <div class="flex justify-center">
+                        <i data-lucide="shopping-cart" class="w-12 h-12 text-primary"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-gray-900">58,000+</div>
+                    <div class="text-gray-600 text-lg">Transactions</div>
                 </div>
-                <div class="space-y-2">
-                    <div class="text-4xl font-bold">600+</div>
-                    <div class="text-pink-100">Trained Beauty Specialists</div>
+                <div class="space-y-4">
+                    <div class="flex justify-center">
+                        <i data-lucide="users" class="w-12 h-12 text-primary"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-gray-900">300+</div>
+                    <div class="text-gray-600 text-lg">Trained Beauty Specialists</div>
                 </div>
-                <div class="space-y-2">
-                    <div class="text-4xl font-bold">150+</div>
-                    <div class="text-pink-100">Partners in 20 Provinces</div>
+                <div class="space-y-4">
+                    <div class="flex justify-center">
+                        <i data-lucide="handshake" class="w-12 h-12 text-primary"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-gray-900">150+</div>
+                    <div class="text-gray-600 text-lg">Partners in 20 Provinces</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-center">
+                        <i data-lucide="graduation-cap" class="w-12 h-12 text-primary"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-gray-900">600+</div>
+                    <div class="text-gray-600 text-lg">Certified Graduates</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Us - Problem We Solved -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Problem We Solved</h2>
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Problem We Solved</h2>
                 <div class="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 
@@ -163,7 +241,7 @@
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-2">1 in 3 women experience physical abuse</h3>
-                                <p class="text-gray-600 leading-relaxed">
+                                <p class="text-gray-600 leading-relaxed text-lg">
                                     1 in 3 of 140 million women in Indonesia experience physical abuse, often tied to financial abuse
                                     that leaves them dependent and vulnerable. Without stable jobs or skills, they struggle to break
                                     free from this cycle.
@@ -177,27 +255,105 @@
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Industry Talent Shortage</h3>
-                                <p class="text-gray-600 leading-relaxed">
+                                <p class="text-gray-600 leading-relaxed text-lg">
                                     Over 150,000 beauty salons in Indonesia struggle to find skilled professionals due to a lack of
                                     training and connection platforms.
                                 </p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="bg-gradient-to-r from-primary/5 to-pink-50 p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Our Solution</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            SalonKita empowers women with training and connects them to employers, addressing both unemployment
-                            and industry talent shortages. We help women gain financial independence while solving the beauty
-                            industry's skilled professional shortage.
-                        </p>
+                <div class="relative flex justify-center">
+                    <img src="assets/women2.png" 
+                         alt="Women illustration" class="h-auto">
+                </div>
+            </div>
+            
+            <!-- Our Solution - Positioned below the illustration -->
+            <div class="mt-16">
+                <div class="bg-gradient-to-r from-primary/5 to-pink-50 p-8 rounded-2xl max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Our Solution</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg text-center">
+                        SalonKita empowers women with training and connects them to employers, addressing both unemployment
+                        and industry talent shortages. We help women gain financial independence while solving the beauty
+                        industry's skilled professional shortage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Beauty Section -->
+    <section id="why-beauty" class="py-20 bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Why do we start with beauty?</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">High Demand and Trends</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    The beauty industry is experiencing unprecedented growth with increasing demand for skilled professionals across Indonesia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="zap" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Express Lane in Generating Income</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Beauty services provide immediate income opportunities with flexible working arrangements and entrepreneurial potential.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="search" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Based on Research</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Our approach is backed by extensive research on women's economic empowerment and industry needs analysis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="award" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Have 10+ Years Experience</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Our team brings over a decade of combined experience in beauty industry training and women's empowerment programs.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="Women empowerment" class="rounded-2xl shadow-xl w-full">
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="assets/gallery1.webp" 
+                         alt="Beauty training" class="rounded-xl shadow-lg">
+                    <img src="assets/gallery2.webp" 
+                         alt="Women empowerment" class="rounded-xl shadow-lg">
+                    <img src="assets/gallery3.webp" 
+                         alt="Beauty salon" class="rounded-xl shadow-lg">
+                    <img src="assets/gallery4.webp" 
+                         alt="Professional training" class="rounded-xl shadow-lg">
                 </div>
             </div>
         </div>
@@ -205,9 +361,9 @@
 
     <!-- Our Impact -->
     <section id="impact" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Impact</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Contributing to the United Nations Sustainable Development Goals
                 </p>
@@ -216,33 +372,43 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="text-4xl mb-4">👩‍💼</div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/impact1.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Gender Equality</h3>
-                    <p class="text-gray-600 leading-relaxed">Empowering women through skills training and economic opportunities</p>
+                    <p class="text-gray-600 leading-relaxed">Empowering women by teaching new skills to boost their employability and independence</p>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="text-4xl mb-4">⚖️</div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/impact2.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Reduced Inequalities</h3>
-                    <p class="text-gray-600 leading-relaxed">Breaking barriers and creating equal opportunities for all women</p>
+                    <p class="text-gray-600 leading-relaxed">Providing equal opportunities for women from various backgrounds</p>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="text-4xl mb-4">💼</div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/impact3.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Decent Work & Economic Growth</h3>
-                    <p class="text-gray-600 leading-relaxed">Creating sustainable employment in the beauty industry</p>
+                    <p class="text-gray-600 leading-relaxed">Equipping women with skills giving them knowledge and negotiation power</p>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="text-4xl mb-4">💰</div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/impact4.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">No Poverty</h3>
-                    <p class="text-gray-600 leading-relaxed">Helping women achieve financial independence and stability</p>
+                    <p class="text-gray-600 leading-relaxed">Enables women to develop valuable skills that are in high demand</p>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center md:col-span-2 lg:col-span-1">
-                    <div class="text-4xl mb-4">🎓</div>
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/impact5.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                    </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Education</h3>
-                    <p class="text-gray-600 leading-relaxed">Providing comprehensive beauty training and certification programs</p>
+                    <p class="text-gray-600 leading-relaxed">Offering specialized training and resources tailored to the industry’s needs</p>
                 </div>
             </div>
         </div>
@@ -250,56 +416,59 @@
 
     <!-- Our Products -->
     <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="max-w-container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Products</h2>
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Products</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Comprehensive solutions for beauty education and employment
                 </p>
                 <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div class="relative h-64">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             alt="Learning Management System" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="book-open" class="w-8 h-8 text-primary"></i>
-                            <h3 class="text-2xl font-bold text-gray-900">Learning Management System</h3>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-12">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Salon Academy</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Empowering women through comprehensive beauty training programs with certified instructors and hands-on experience.
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 leading-relaxed mb-6">
-                            Comprehensive online platform offering structured beauty training courses, certifications, and skill
-                            assessments. Our LMS provides flexible learning schedules and expert-led content to ensure quality
-                            education for all participants.
-                        </p>
-                        <button class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition-colors">
-                            Explore Courses
-                        </button>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Layanan Kita</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Connecting salon and Beauty Artists to employers (salon), creating a seamless job matching platform for the beauty industry.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="building" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Mitra Salon</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg">
+                                    Helping salon owners grow their business through our comprehensive CRM system and business management tools.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div class="relative h-64">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             alt="Marketplace" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <i data-lucide="shopping-bag" class="w-8 h-8 text-primary"></i>
-                            <h3 class="text-2xl font-bold text-gray-900">Marketplace</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed mb-6">
-                            Connect trained beauty professionals with salon owners and clients. Our marketplace facilitates job
-                            matching, service bookings, and career opportunities, creating a thriving ecosystem for the beauty
-                            industry.
-                        </p>
-                        <button class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition-colors">
-                            Join Marketplace
-                        </button>
-                    </div>
+                <div class="relative">
+                    <img src="assets/mockup.webp" 
+                         alt="Product Mockup" class="w-full">
                 </div>
             </div>
         </div>
@@ -307,34 +476,37 @@
 
     <!-- Achievements & Team -->
     <section id="team" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="max-w-container mx-auto px-4">
             <!-- Achievements -->
             <div class="mb-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>
+                    <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Achievements</h2>
                     <div class="w-24 h-1 bg-primary mx-auto"></div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+                        <div class="mb-6">
+                            <img src="assets/achievment1.jpg" 
+                                 alt="UCL Award" class="w-full h-32 object-cover rounded-lg">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Best Idea Winner</h3>
                         <p class="text-gray-600">University College London Pitch Day 2024</p>
                     </div>
 
                     <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+                        <div class="mb-6">
+                            <img src="assets/achievment2.jpg" 
+                                 alt="Hult Prize" class="w-full h-32 object-cover rounded-lg">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Changemaker Social Enterprise</h3>
                         <p class="text-gray-600">Hult Prize Dubai 2024</p>
                     </div>
 
                     <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+                        <div class="mb-6">
+                            <img src="assets/achievment3.jpg" 
+                                 alt="YSEALI Award" class="w-full h-32 object-cover rounded-lg">
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Women Leader Entrepreneur</h3>
                         <p class="text-gray-600">YSEALI – South East Asia</p>
@@ -345,43 +517,49 @@
             <!-- Team -->
             <div>
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Team</h2>
+                    <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Team</h2>
                     <p class="text-xl text-gray-600">Meet the passionate leaders driving change</p>
                     <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="Hertauli Harianja" class="w-full h-full object-cover">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                        <div class="mb-6">
+                            <img src="assets/team1.png" 
+                                 alt="Hertauli Harianja" class="w-32 h-32 rounded-full mx-auto object-cover">
                         </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-1">Hertauli Harianja</h3>
-                            <p class="text-primary font-semibold">CEO</p>
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Hertauli Harianja</h3>
+                        <p class="text-primary font-semibold text-lg mb-4">CEO</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            MSC. ENTREPRENEURSHIP<br>
+                            SERIAL ENTREPRENEUR<br>
+                            UNIVERSITY COLLEGE LONDON
+                        </p>
                     </div>
 
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="Diovio Alfath" class="w-full h-full object-cover">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                        <div class="mb-6">
+                            <img src="assets/team2.png" 
+                                 alt="Diovio Alfath" class="w-32 h-32 rounded-full mx-auto object-cover">
                         </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-1">Diovio Alfath</h3>
-                            <p class="text-primary font-semibold">COO</p>
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Diovio Alfath</h3>
+                        <p class="text-primary font-semibold text-lg mb-4">COO</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            CERTIFIED AWS AND ALIBABA CLOUD COMPUTING, EXPERIENCED FOR MORE THAN 10 YEARS IN INFORMATION & TECHNOLOGY
+                        </p>
                     </div>
 
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                                 alt="David Zoas" class="w-full h-full object-cover">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                        <div class="mb-6">
+                            <img src="assets/team3.png" 
+                                 alt="David Zoas" class="w-32 h-32 rounded-full mx-auto object-cover">
                         </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-900 mb-1">David Zoas</h3>
-                            <p class="text-primary font-semibold">CTO</p>
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">David Zoas</h3>
+                        <p class="text-primary font-semibold text-lg mb-4">CTO</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            EXPERIENCED FOR MORE THAN 7 YEARS IN TECHNOLOGY DEVELOPMENT<br>
+                            MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+                        </p>
                     </div>
                 </div>
             </div>
@@ -390,32 +568,52 @@
 
     <!-- Join Us -->
     <section class="py-20 bg-gradient-to-br from-primary to-primary-dark">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-white mb-6">Join Our Movement</h2>
+        <div class="max-w-container mx-auto px-4 text-center">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-5xl font-bold text-white mb-6">Join Our Movement</h2>
                 <p class="text-xl text-pink-100 mb-12 leading-relaxed">
                     Be part of the transformation. Whether you're looking to learn, teach, or hire, SalonKita has a place for
                     you in our growing community.
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
                         <div class="bg-white p-8 rounded-2xl shadow-xl">
-                            <i data-lucide="qr-code" class="w-24 h-24 text-primary mx-auto mb-4"></i>
+                            <img src="assets/qrcode.jpg" 
+                                 alt="QR Code" class="w-48 h-48 mx-auto mb-4 rounded-lg">
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Scan to Join</h3>
                             <p class="text-gray-600">Quick access to our platform</p>
                         </div>
                     </div>
 
                     <div class="space-y-6">
-                        <button class="w-full bg-white text-primary hover:bg-gray-100 py-4 px-6 rounded-lg text-lg font-semibold transition-colors">
-                            Join as a Student
-                        </button>
-                        <button class="w-full border-2 border-white text-white hover:bg-white hover:text-primary py-4 px-6 rounded-lg text-lg font-semibold transition-colors">
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl text-left text-white">
+                            <h4 class="text-xl font-bold mb-4">Contact Information</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="building" class="w-4 h-4 text-pink-200"></i>
+                                    <span class="font-semibold">PT. Salon Kita Indonesia</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-pink-200 mt-0.5"></i>
+                                    <span>Jl. Nagan Lor No.19, Patehan, Kecamatan Keraton, Yogyakarta</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="phone" class="w-4 h-4 text-pink-200"></i>
+                                    <span>+62 8116130745 | +44 777 6629552</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="mail" class="w-4 h-4 text-pink-200"></i>
+                                    <span>hertauli.harianja@salonkita.co.id | info@salonkita.id</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="globe" class="w-4 h-4 text-pink-200"></i>
+                                    <span>salonkita.id</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full border-2 border-white text-white hover:bg-white hover:text-primary py-4 px-6 rounded-lg text-xl font-semibold transition-colors bg-transparent">
                             Partner with Us
-                        </button>
-                        <button class="w-full border-2 border-white text-white hover:bg-white hover:text-primary py-4 px-6 rounded-lg text-lg font-semibold transition-colors">
-                            Hire Talent
                         </button>
                     </div>
                 </div>
@@ -425,13 +623,12 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
+        <div class="max-w-container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" 
-                             alt="Salonkita Logo" class="w-8 h-8 rounded object-cover">
-                        <span class="text-xl font-bold">SalonKita</span>
+                        <img src="assets/logo.png" 
+                             alt="Salonkita Logo" class="w-20 h-20 object-cover">
                     </div>
                     <p class="text-gray-400 leading-relaxed">
                         Transforming lives through beauty education and employment opportunities.
@@ -442,6 +639,7 @@
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <div class="space-y-2">
                         <a href="#about" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="#why-beauty" class="block text-gray-400 hover:text-white transition-colors">Why Beauty</a>
                         <a href="#impact" class="block text-gray-400 hover:text-white transition-colors">Our Impact</a>
                         <a href="#products" class="block text-gray-400 hover:text-white transition-colors">Products</a>
                         <a href="#team" class="block text-gray-400 hover:text-white transition-colors">Team</a>
@@ -460,17 +658,32 @@
 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <div class="space-y-2 text-gray-400">
-                        <p>Jakarta, Indonesia</p>
-                        <p>info@salonkita.com</p>
-                        <p>+62 xxx xxxx xxxx</p>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <p>PT. Salon Kita Indonesia</p>
+                        <p>Jl. Nagan Lor No.19, Patehan</p>
+                        <p>Kecamatan Keraton, Yogyakarta</p>
+                        <p>+62 8116130745</p>
+                        <p>info@salonkita.id</p>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <!-- Supported By Section -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <h4 class="text-lg font-semibold mb-6 text-center">Supported By</h4>
+                <div class="flex justify-center items-center space-x-8 flex-wrap gap-4">
+                    <img src="assets/ucl1.png" 
+                         alt="Partner Logo 1" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="assets/ucl2.jpg" 
+                         alt="Partner Logo 2" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="assets/aws.webp" 
+                         alt="Partner Logo 3" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2024 SalonKita. All rights reserved. Empowering women, transforming lives.
+                    © 2025 SalonKita. All rights reserved. Empowering women, transforming lives.
                 </p>
             </div>
         </div>
@@ -480,10 +693,31 @@
         // Initialize Lucide icons
         lucide.createIcons();
         
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('active');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+        
+        // Sidebar functions
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
         }
         
         // Smooth scrolling for anchor links
@@ -497,21 +731,7 @@
                         block: 'start'
                     });
                 }
-                
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenu.classList.remove('active');
             });
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuButton = e.target.closest('button');
-            
-            if (!menuButton && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-            }
         });
     </script>
 </body>
