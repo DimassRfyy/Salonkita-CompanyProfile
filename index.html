@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SalonKita - Transforming Unemployed Women</title>
+    <title>SalonKita - Building Indonesia's Beauty Business Growth Ecosystem</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,7 +26,7 @@
                         'sans': ['Nunito', 'system-ui', 'sans-serif']
                     },
                     maxWidth: {
-                        'container': '1200px'
+                        'container': '1080px'
                     }
                 }
             }
@@ -36,6 +36,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            zoom: 90%;
         }
         
         .gradient-text {
@@ -167,19 +168,19 @@
     <section class="hero-bg min-h-screen flex items-center justify-center relative">
         <div class="relative z-10 text-center text-white px-4 mt-20">
             <div class="max-w-5xl mx-auto space-y-8">
-                <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full text-lg font-medium">
-                    Empowering Women Through Beauty
-                </span>
-                <h1 class="text-6xl lg:text-8xl font-bold leading-tight">
-                    Transforming unemployed women
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+                    Building Indonesia's Beauty Business Growth Ecosystem
                 </h1>
-                <p class="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-                    Through comprehensive training and employment opportunities in Indonesia's growing beauty industry
+                <p class="text-xl sm:text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto text-pink-100">
+                    Empowering beauty businesses operate smarter, develop stronger teams, and grow profitably.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 rounded-lg text-xl font-semibold transition-colors">
-                        Learn More
+                    <button class="bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-xl text-xl font-bold transition-all shadow-lg hover:shadow-pink-500/30">
+                        Join Us
                     </button>
+                    <a href="#about" class="border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 rounded-xl text-xl font-semibold transition-colors inline-block">
+                        Learn More
+                    </a>
                 </div>
             </div>
         </div>
@@ -221,60 +222,65 @@
         </div>
     </section>
 
-    <!-- About Us - Problem We Solved -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-900 mb-4">Problem We Solved</h2>
-                <div class="w-24 h-1 bg-primary mx-auto"></div>
+    <!-- Why SKID? - Our Unique Value Proposition -->
+    <section id="about" class="py-24 bg-gradient-to-b from-gray-50 via-pink-50/20 to-gray-50 relative overflow-hidden">
+        <!-- Background decorative ambient circles -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-300/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-container mx-auto px-4 relative z-10">
+            <!-- Header with "Our Unique Value Proposition" BELOW "Why SKID?" -->
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                    Why SKID?
+                </h2>
+                <p class="text-xl lg:text-2xl font-semibold text-primary tracking-wide">
+                    Our Unique Value Proposition
+                </p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-primary-dark mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="users" class="w-6 h-6 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">1 in 3 women experience physical abuse</h3>
-                                <p class="text-gray-600 leading-relaxed text-lg">
-                                    1 in 3 of 140 million women in Indonesia experience physical abuse, often tied to financial abuse
-                                    that leaves them dependent and vulnerable. Without stable jobs or skills, they struggle to break
-                                    free from this cycle.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="trending-up" class="w-6 h-6 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Industry Talent Shortage</h3>
-                                <p class="text-gray-600 leading-relaxed text-lg">
-                                    Over 150,000 beauty salons in Indonesia struggle to find skilled professionals due to a lack of
-                                    training and connection platforms.
-                                </p>
-                            </div>
-                        </div>
+            <!-- 2 Column Feature Cards Layout (No Image) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+                <!-- Card 1: Asset-Light Expansion Model -->
+                <div class="bg-white rounded-3xl p-8 lg:p-10 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform duration-500"></div>
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/15 to-pink-100 flex items-center justify-center mb-8 border border-primary/20 shadow-sm">
+                        <i data-lucide="layers" class="w-8 h-8 text-primary"></i>
                     </div>
+
+                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3.5 py-1 rounded-full mb-4">
+                        Scalable Growth
+                    </span>
+
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        Asset-Light Expansion Model
+                    </h3>
+                    
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        SKID scales without building new training centers, turning existing salon infrastructure into revenue generating learning hubs.
+                    </p>
                 </div>
 
-                <div class="relative flex justify-center">
-                    <img src="assets/women2.png" 
-                         alt="Women illustration" class="h-auto">
-                </div>
-            </div>
-            
-            <!-- Our Solution - Positioned below the illustration -->
-            <div class="mt-16">
-                <div class="bg-gradient-to-r from-primary/5 to-pink-50 p-8 rounded-2xl max-w-4xl mx-auto">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Our Solution</h3>
-                    <p class="text-gray-700 leading-relaxed text-lg text-center">
-                        SalonKita empowers women with training and connects them to employers, addressing both unemployment
-                        and industry talent shortages. We help women gain financial independence while solving the beauty
-                        industry's skilled professional shortage.
+                <!-- Card 2: Beauty Business Ecosystem -->
+                <div class="bg-white rounded-3xl p-8 lg:p-10 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform duration-500"></div>
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/15 to-pink-100 flex items-center justify-center mb-8 border border-primary/20 shadow-sm">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-primary"></i>
+                    </div>
+
+                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3.5 py-1 rounded-full mb-4">
+                        All-in-One Solution
+                    </span>
+
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        Beauty Business Ecosystem
+                    </h3>
+                    
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        SKID is the only platform in Indonesia that combines salon operations, workforce development, and business growth into a single ecosystem.
                     </p>
                 </div>
             </div>
@@ -356,116 +362,281 @@
         </div>
     </section>
 
-    <!-- Our Impact -->
-    <section id="impact" class="py-20 bg-gray-50">
-        <div class="max-w-container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Impact</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Contributing to the United Nations Sustainable Development Goals
+    <!-- Business & Social Impact -->
+    <section id="impact" class="py-24 bg-gradient-to-b from-gray-50 via-pink-50/30 to-white relative overflow-hidden">
+        <div class="max-w-container mx-auto px-4 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                    Business & Social Impact
+                </h2>
+                <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                    Creating measurable impact for beauty businesses and Indonesian women.
                 </p>
-                <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-primary-dark mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="flex justify-center mb-4">
-                        <img src="assets/impact1.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+            <!-- Two Main Impact Pillars -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- BUSINESS IMPACT -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-pink-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+                    <div>
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/15 to-pink-100 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="trending-up" class="w-7 h-7 text-primary"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">Commercial Growth</span>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Business Impact</h3>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <!-- Item 1 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-primary mt-1">
+                                    <i data-lucide="sliders" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded">Improve</span>
+                                        <span class="text-xl font-extrabold text-gray-900">110K</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Salon Operational Efficiency</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Elevating management standards and streamlining daily salon operations.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-emerald-600 mt-1">
+                                    <i data-lucide="coins" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded">Generate</span>
+                                        <span class="text-lg font-extrabold text-gray-900">New Revenue</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Through Growth Partnership</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Unlocking scalable business models and monetization streams for partners.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-sky-600 mt-1">
+                                    <i data-lucide="repeat" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded">Increase</span>
+                                        <span class="text-lg font-extrabold text-gray-900">Retention & Sustainability</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Customer Retention & Long-term Growth</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Fostering repeat customers and sustainable business resilience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Gender Equality</h3>
-                    <p class="text-gray-600 leading-relaxed">Empowering women by teaching new skills to boost their employability and independence</p>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="flex justify-center mb-4">
-                        <img src="assets/impact2.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reduced Inequalities</h3>
-                    <p class="text-gray-600 leading-relaxed">Providing equal opportunities for women from various backgrounds</p>
-                </div>
+                <!-- SOCIAL IMPACT -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-pink-100 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-pink-500/5 rounded-bl-full pointer-events-none"></div>
+                    <div>
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200/60 border border-pink-200 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart" class="w-7 h-7 text-primary"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">Empowering Women</span>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Social Impact</h3>
+                            </div>
+                        </div>
 
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="flex justify-center mb-4">
-                        <img src="assets/impact3.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Decent Work & Economic Growth</h3>
-                    <p class="text-gray-600 leading-relaxed">Equipping women with skills giving them knowledge and negotiation power</p>
-                </div>
+                        <div class="space-y-5">
+                            <!-- Item 1 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-primary mt-1">
+                                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded">Upskill</span>
+                                        <span class="text-xl font-extrabold text-gray-900">1,000+ Women</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Industry-Relevant Beauty Programs</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Comprehensive hands-on beauty training tailored to industry demands.
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center">
-                    <div class="flex justify-center mb-4">
-                        <img src="assets/impact4.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">No Poverty</h3>
-                    <p class="text-gray-600 leading-relaxed">Enables women to develop valuable skills that are in high demand</p>
-                </div>
+                            <!-- Item 2 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-emerald-600 mt-1">
+                                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded">Create</span>
+                                        <span class="text-xl font-extrabold text-gray-900">90% Employment Rate</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Direct Placement</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Connecting certified graduates with salon owners for immediate employment.
+                                    </p>
+                                </div>
+                            </div>
 
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center md:col-span-2 lg:col-span-1">
-                    <div class="flex justify-center mb-4">
-                        <img src="assets/impact5.png" alt="Gender Equality Icon" class="h-16 w-16 object-contain mx-auto" />
+                            <!-- Item 3 -->
+                            <div class="bg-pink-50/40 rounded-2xl p-6 border border-pink-100/80 hover:border-primary/30 transition-colors flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white shadow-sm border border-pink-100 flex items-center justify-center flex-shrink-0 text-amber-600 mt-1">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded">Increase</span>
+                                        <span class="text-lg font-extrabold text-gray-900">Economic Independence</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Women's Participation in Economy</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Empowering women to gain financial stability and drive Indonesia's economy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Education</h3>
-                    <p class="text-gray-600 leading-relaxed">Offering specialized training and resources tailored to the industry’s needs</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Products -->
-    <section id="products" class="py-20 bg-white">
-        <div class="max-w-container mx-auto px-4">
+    <section id="products" class="py-24 bg-gradient-to-b from-white via-pink-50/30 to-white relative overflow-hidden">
+        <div class="max-w-container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Products</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Comprehensive solutions for beauty education and employment
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+                    Choose the Right Plan for Your Business
+                </h2>
+                <p class="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    A Salon Growth Management Platform that helps beauty businesses operate smarter, develop stronger teams, and grow profitably.
                 </p>
-                <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-primary-dark mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-12">
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Salon Academy</h3>
-                                <p class="text-gray-600 leading-relaxed text-lg">
-                                    Empowering women through comprehensive beauty training programs with certified instructors and hands-on experience.
-                                </p>
-                            </div>
+            <!-- Membership Plans Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Freemium Card -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Starter Tier</span>
                         </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Freemium</h3>
+                        <p class="text-sm text-gray-500 mb-6">Essential benefits to get your beauty business connected and growing.</p>
+                        
+                        <div class="border-t border-gray-100 pt-6 space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium text-base">SKID Partner Membership</span>
                             </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Layanan Kita</h3>
-                                <p class="text-gray-600 leading-relaxed text-lg">
-                                    Connecting salon and Beauty Artists to employers (salon), creating a seamless job matching platform for the beauty industry.
-                                </p>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium text-base">Beauty Artist Placement</span>
                             </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="building" class="w-6 h-6 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Mitra Salon</h3>
-                                <p class="text-gray-600 leading-relaxed text-lg">
-                                    Helping salon owners grow their business through our comprehensive CRM system and business management tools.
-                                </p>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium text-base">Free Business Webinars</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <button class="w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors duration-300 shadow-sm">
+                            Get Started Free
+                        </button>
+                    </div>
                 </div>
 
-                <div class="relative">
-                    <img src="assets/mockup.webp" 
-                         alt="Product Mockup" class="w-full">
+                <!-- Premium Card (Highlighted) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-primary shadow-2xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 md:-translate-y-2">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary-dark text-white text-xs font-extrabold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">Pro Tier</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                        <p class="text-sm text-gray-500 mb-6">Advanced POS and salon management for operational efficiency.</p>
+                        
+                        <div class="border-t border-gray-100 pt-6 space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-primary stroke-[3]"></i>
+                                </div>
+                                <span class="text-gray-900 font-bold text-base">Everything in Freemium</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
+                                </div>
+                                <span class="text-gray-700 font-medium text-base">SKID POS (salon management)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <button class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-bold hover:opacity-95 transition-opacity duration-300 shadow-md">
+                            Choose Premium
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Platinum Card -->
+                <div class="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-pink-300 bg-pink-950/80 border border-pink-500/30 px-3 py-1 rounded-full">Partner Tier</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Platinum</h3>
+                        <p class="text-sm text-slate-400 mb-6">Maximum growth collaboration with shared profitability.</p>
+                        
+                        <div class="border-t border-slate-800 pt-6 space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-pink-400 stroke-[3]"></i>
+                                </div>
+                                <span class="text-white font-bold text-base">Everything in Premium</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 stroke-[3]"></i>
+                                </div>
+                                <span class="text-slate-200 font-medium text-base">Profit Sharing program</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-800">
+                        <button class="w-full py-3.5 px-6 rounded-xl bg-white text-slate-900 font-bold hover:bg-pink-50 transition-colors duration-300 shadow-md">
+                            Join Platinum
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -593,7 +764,7 @@
                                 </div>
                                 <div class="flex items-start space-x-3">
                                     <i data-lucide="map-pin" class="w-4 h-4 text-pink-200 mt-0.5"></i>
-                                    <span>Jl. Nagan Lor No.19, Patehan, Kecamatan Keraton, Yogyakarta</span>
+                                    <span>Jl. Sabo No.25, Krodan, Maguwoharjo, Sleman, Yogyakarta</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <i data-lucide="phone" class="w-4 h-4 text-pink-200"></i>
@@ -601,7 +772,7 @@
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <i data-lucide="mail" class="w-4 h-4 text-pink-200"></i>
-                                    <span>hertauli.harianja@salonkita.co.id | info@salonkita.id</span>
+                                    <span>harianja.harianja@gmail.com | info@salonkita.id</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <i data-lucide="globe" class="w-4 h-4 text-pink-200"></i>
@@ -627,9 +798,12 @@
                         <img src="assets/logo.png" 
                              alt="Salonkita Logo" class="w-20 h-20 object-cover">
                     </div>
-                    <p class="text-gray-400 leading-relaxed">
-                        Transforming lives through beauty education and employment opportunities.
+                    <p class="text-gray-400 leading-relaxed text-sm mb-3">
+                        Building Indonesia's Beauty Business Growth Ecosystem.
                     </p>
+                    <span class="inline-block text-xs font-extrabold text-primary tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                        #EARN MORE AND GROW FASTER!
+                    </span>
                 </div>
 
                 <div>
@@ -657,8 +831,8 @@
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <div class="space-y-2 text-gray-400 text-sm">
                         <p>PT. Salon Kita Indonesia</p>
-                        <p>Jl. Nagan Lor No.19, Patehan</p>
-                        <p>Kecamatan Keraton, Yogyakarta</p>
+                        <p>Jl. Sabo No.25, Krodan,</p>
+                        <p>Maguwoharjo, Sleman, Yogyakarta</p>
                         <p>+62 8116130745</p>
                         <p>info@salonkita.id</p>
                     </div>
@@ -679,8 +853,8 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2025 SalonKita. All rights reserved. Empowering women, transforming lives.
+                <p class="text-gray-400 text-sm">
+                    © 2026 SalonKita. All rights reserved. <span class="text-pink-400 font-bold ml-2">#EARN MORE AND GROW FASTER!</span>
                 </p>
             </div>
         </div>
