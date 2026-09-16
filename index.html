@@ -471,112 +471,306 @@
     <section id="products" class="py-24 bg-gradient-to-b from-white via-pink-50/30 to-white relative overflow-hidden">
       <div class="max-w-container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">Choose the Right Plan for Your Business</h2>
-          <p class="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">A Salon Growth Management Platform that helps beauty businesses operate smarter, develop stronger teams, and grow profitably.</p>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-3.5 py-1.5 rounded-full inline-block mb-3">Partnership Programs</span>
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Choose the Right Plan for Your Business</h2>
+          <p class="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Pilihan program kemitraan Salonkita. Klik gambar atau tombol untuk melihat detail brosur lengkap layar penuh.</p>
           <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-primary-dark mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <!-- Membership Plans Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          <!-- Freemium Card -->
-          <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Starter Tier</span>
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Freemium</h3>
-              <p class="text-sm text-gray-500 mb-6">Essential benefits to get your beauty business connected and growing.</p>
-
-              <div class="border-t border-gray-100 pt-6 space-y-4">
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
-                  </div>
-                  <span class="text-gray-700 font-medium text-base">SKID Partner Membership</span>
+        <!-- Membership Plans Grid (3 Cards Clean with Portrait Image) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          
+          <!-- 1. Basic Partnership Card -->
+          <div class="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <!-- Portrait Image Container -->
+            <div class="relative aspect-[3/4] w-full bg-pink-50/40 overflow-hidden group/img cursor-pointer" onclick="openFullscreenImage('assets/basic (1).png', 'Basic Partnership - Salonkita Indonesia')">
+              <img 
+                src="assets/basic (1).png" 
+                alt="Basic Partnership Brochure" 
+                onerror="this.onerror=null; this.src='assets/gallery1.webp';"
+                class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-between p-4">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-extrabold uppercase tracking-wider text-gray-900 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow">Starter Tier</span>
+                  <button type="button" aria-label="Lihat Gambar Penuh" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white text-gray-800 flex items-center justify-center shadow transition-transform active:scale-95">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                  </button>
                 </div>
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
-                  </div>
-                  <span class="text-gray-700 font-medium text-base">Beauty Artist Placement</span>
-                </div>
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
-                  </div>
-                  <span class="text-gray-700 font-medium text-base">Free Business Webinars</span>
+                <div class="text-white">
+                  <span class="text-xs uppercase tracking-wider opacity-90 font-medium">Investasi Terjangkau</span>
+                  <div class="text-2xl font-black">99K <span class="text-xs font-medium opacity-80">/ tahun</span></div>
                 </div>
               </div>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-100">
-              <button class="w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors duration-300 shadow-sm">Get Started Free</button>
-            </div>
-          </div>
-
-          <!-- Premium Card (Highlighted) -->
-          <div class="bg-white rounded-3xl p-8 border-2 border-primary shadow-2xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 md:-translate-y-2">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary-dark text-white text-xs font-extrabold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md">Most Popular</div>
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">Pro Tier</span>
+            <!-- Card Body -->
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-extrabold text-gray-900">Basic Partnership</h3>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
-              <p class="text-sm text-gray-500 mb-6">Advanced POS and salon management for operational efficiency.</p>
+              <p class="text-xs text-gray-500 mb-4">Membership Salonkita Indonesia untuk penempatan magang & komunitas.</p>
 
-              <div class="border-t border-gray-100 pt-6 space-y-4">
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-primary stroke-[3]"></i>
-                  </div>
-                  <span class="text-gray-900 font-bold text-base">Everything in Freemium</span>
-                </div>
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 stroke-[3]"></i>
-                  </div>
-                  <span class="text-gray-700 font-medium text-base">SKID POS (salon management)</span>
-                </div>
+              <!-- Tombol Full Screen & Aksi -->
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <button onclick="openFullscreenImage('assets/basic (1).png', 'Basic Partnership - Salonkita Indonesia')" class="py-2.5 px-3 rounded-xl bg-pink-50 hover:bg-pink-100/80 text-primary font-bold transition-colors text-xs flex items-center justify-center space-x-1.5 border border-primary/20">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                  <span>Full Screen</span>
+                </button>
+                <a href="#contact" class="py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-gray-800 text-white font-bold transition-colors text-xs text-center shadow-sm flex items-center justify-center">
+                  Daftar Basic
+                </a>
               </div>
-            </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-100">
-              <button class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-bold hover:opacity-95 transition-opacity duration-300 shadow-md">Choose Premium</button>
+              <!-- Collapsible Dropdown Detail (Default Closed) -->
+              <details class="group/details border border-gray-100 rounded-2xl bg-gray-50/70 overflow-hidden">
+                <summary class="flex items-center justify-between p-3.5 cursor-pointer text-xs font-bold text-gray-700 select-none hover:bg-gray-100/80 transition-colors">
+                  <span class="flex items-center space-x-2">
+                    <i data-lucide="info" class="w-3.5 h-3.5 text-primary"></i>
+                    <span>Keterangan & Benefit Teks</span>
+                  </span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open/details:rotate-180 transition-transform duration-200"></i>
+                </summary>
+                <div class="p-3.5 pt-1 text-xs text-gray-600 border-t border-gray-100/80 space-y-2 bg-white">
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Partner Penempatan Magang</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Member of SKID Community</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Beauty Business Webinar</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Promosi salon gratis dari SKID</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Menjadi Beauty Coach di LMS</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Royalti Kelas Video 40%</span></div>
+                </div>
+              </details>
             </div>
           </div>
 
-          <!-- Platinum Card -->
-          <div class="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-bold uppercase tracking-wider text-pink-300 bg-pink-950/80 border border-pink-500/30 px-3 py-1 rounded-full">Partner Tier</span>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-2">Platinum</h3>
-              <p class="text-sm text-slate-400 mb-6">Maximum growth collaboration with shared profitability.</p>
-
-              <div class="border-t border-slate-800 pt-6 space-y-4">
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-pink-400 stroke-[3]"></i>
-                  </div>
-                  <span class="text-white font-bold text-base">Everything in Premium</span>
+          <!-- 2. Premium Partnership Card -->
+          <div class="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group relative">
+            <!-- Portrait Image Container -->
+            <div class="relative aspect-[3/4] w-full bg-pink-50/40 overflow-hidden group/img cursor-pointer" onclick="openFullscreenImage('assets/basic (2).png', 'Premium Partnership - Salonkita Indonesia')">
+              <img 
+                src="assets/basic (2).png" 
+                alt="Premium Partnership Brochure" 
+                onerror="this.onerror=null; this.src='assets/gallery2.webp';"
+                class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-between p-4">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-extrabold uppercase tracking-wider text-gray-900 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow">Pro Tier</span>
+                  <button type="button" aria-label="Lihat Gambar Penuh" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white text-gray-800 flex items-center justify-center shadow transition-transform active:scale-95">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                  </button>
                 </div>
-                <div class="flex items-start space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 stroke-[3]"></i>
-                  </div>
-                  <span class="text-slate-200 font-medium text-base">Profit Sharing program</span>
+                <div class="text-white">
+                  <span class="text-xs uppercase tracking-wider text-pink-200 font-medium">POS + Manajemen Lengkap</span>
+                  <div class="text-2xl font-black">1,499 Jt <span class="text-xs font-medium opacity-80">/ tahun</span></div>
                 </div>
               </div>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-slate-800">
-              <button class="w-full py-3.5 px-6 rounded-xl bg-white text-slate-900 font-bold hover:bg-pink-50 transition-colors duration-300 shadow-md">Join Platinum</button>
+            <!-- Card Body -->
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-extrabold text-gray-900">Premium Partnership</h3>
+              </div>
+              <p class="text-xs text-gray-500 mb-4">Solusi POS Salon Management terpadu dan promosi iklan salon gratis.</p>
+
+              <!-- Tombol Full Screen & Aksi -->
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <button onclick="openFullscreenImage('assets/basic (2).png', 'Premium Partnership - Salonkita Indonesia')" class="py-2.5 px-3 rounded-xl bg-pink-50 hover:bg-pink-100 text-primary font-bold transition-colors text-xs flex items-center justify-center space-x-1.5 border border-primary/30">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                  <span>Full Screen</span>
+                </button>
+                <a href="#contact" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-primary to-primary-dark hover:opacity-95 text-white font-bold transition-all text-xs text-center shadow-md flex items-center justify-center">
+                  Pilih Premium
+                </a>
+              </div>
+
+              <!-- Collapsible Dropdown Detail (Default Closed) -->
+              <details class="group/details border border-pink-100 rounded-2xl bg-pink-50/40 overflow-hidden">
+                <summary class="flex items-center justify-between p-3.5 cursor-pointer text-xs font-bold text-gray-700 select-none hover:bg-pink-100/50 transition-colors">
+                  <span class="flex items-center space-x-2">
+                    <i data-lucide="info" class="w-3.5 h-3.5 text-primary"></i>
+                    <span>Keterangan & Benefit Teks</span>
+                  </span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-open/details:rotate-180 transition-transform duration-200"></i>
+                </summary>
+                <div class="p-3.5 pt-1 text-xs text-gray-600 border-t border-pink-100/80 space-y-2 bg-white">
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-primary flex-shrink-0"></i><span class="font-semibold text-gray-900">POS Salon Management (Kasir & Operasional)</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Iklan Salon Gratis!</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Partner Penempatan Magang</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Member of SKID Community</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Beauty Business Webinar</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Jadi Beauty Coach LMS</span></div>
+                  <div class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Komisi / Royalti Kelas Video 40%</span></div>
+                </div>
+              </details>
             </div>
           </div>
+
+          <!-- 3. Platinum Partnership Card (Enterprise Tier with Sub-image switcher / Fullscreen) -->
+          <div class="bg-slate-900 text-white rounded-3xl overflow-hidden border border-slate-800 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <!-- Portrait Image Container -->
+            <div class="relative aspect-[3/4] w-full bg-slate-950 overflow-hidden group/img cursor-pointer" onclick="openFullscreenImage(currentPlatinumImg, currentPlatinumTitle)">
+              <img 
+                id="platinumCardImg"
+                src="assets/platinum1.png" 
+                alt="Platinum Partnership Brochure" 
+                onerror="this.onerror=null; this.src='assets/gallery3.webp';"
+                class="w-full h-full object-cover group-hover/img:scale-105 transition-all duration-500" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent flex flex-col justify-between p-4">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-extrabold uppercase tracking-wider text-pink-300 bg-pink-950/80 border border-pink-500/30 px-3 py-1 rounded-full shadow">Enterprise Tier</span>
+                  <button type="button" aria-label="Lihat Gambar Penuh" class="w-8 h-8 rounded-full bg-slate-800/90 hover:bg-slate-700 text-white flex items-center justify-center shadow transition-transform active:scale-95">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
+                <div>
+                  <span id="platinumImgBadge" class="text-[11px] uppercase tracking-wider text-amber-400 font-bold block mb-0.5">1. Platinum Salon</span>
+                  <div id="platinumImgPrice" class="text-2xl font-black text-white">99 Jt <span class="text-xs font-medium text-slate-400">/ 5 Tahun</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="text-xl font-extrabold text-white">Platinum Partnership</h3>
+              </div>
+              <p class="text-xs text-slate-400 mb-3.5">Pilih brosur dari 3 opsi program kemitraan 5 tahun:</p>
+
+              <!-- Tab Pilihan 3 Sub-Gambar Platinum -->
+              <div class="grid grid-cols-3 gap-1 p-1 bg-slate-800/90 rounded-xl mb-4 border border-slate-700/60">
+                <button onclick="switchPlatinumTab('salon')" id="btnTabSalon" class="py-1.5 px-2 rounded-lg text-[11px] font-bold text-slate-900 bg-amber-400 transition-all text-center truncate">
+                  Salon
+                </button>
+                <button onclick="switchPlatinumTab('academy')" id="btnTabAcademy" class="py-1.5 px-2 rounded-lg text-[11px] font-bold text-slate-300 hover:text-white transition-all text-center truncate">
+                  Academy
+                </button>
+                <button onclick="switchPlatinumTab('hub')" id="btnTabHub" class="py-1.5 px-2 rounded-lg text-[11px] font-bold text-slate-300 hover:text-white transition-all text-center truncate">
+                  Beauty Hub
+                </button>
+              </div>
+
+              <!-- Tombol Full Screen & Aksi -->
+              <div class="grid grid-cols-2 gap-2 mb-4">
+                <button onclick="openFullscreenImage(currentPlatinumImg, currentPlatinumTitle)" class="py-2.5 px-3 rounded-xl border border-pink-500/40 text-pink-300 hover:bg-pink-500/10 font-bold transition-colors text-xs flex items-center justify-center space-x-1.5">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                  <span>Full Screen</span>
+                </button>
+                <a href="#contact" class="py-2.5 px-3 rounded-xl bg-white hover:bg-pink-50 text-slate-950 font-bold transition-colors text-xs text-center shadow-md flex items-center justify-center">
+                  Konsultasi
+                </a>
+              </div>
+
+              <!-- Collapsible Dropdown Detail (Default Closed) -->
+              <details class="group/details border border-slate-800 rounded-2xl bg-slate-800/50 overflow-hidden">
+                <summary class="flex items-center justify-between p-3.5 cursor-pointer text-xs font-bold text-slate-300 select-none hover:bg-slate-800 transition-colors">
+                  <span class="flex items-center space-x-2">
+                    <i data-lucide="info" class="w-3.5 h-3.5 text-amber-400"></i>
+                    <span>Keterangan 3 Opsi Platinum</span>
+                  </span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open/details:rotate-180 transition-transform duration-200"></i>
+                </summary>
+                <div class="p-3.5 pt-2 text-xs text-slate-300 border-t border-slate-800 space-y-3 bg-slate-900">
+                  <!-- Sub 1 -->
+                  <div class="border-b border-slate-800 pb-2">
+                    <div class="font-bold text-amber-400 flex justify-between">
+                      <span>1. Platinum Salon</span>
+                      <span>99 Jt/5 Thn</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Recruitment, Training, SOP, POS/CRM (1 Thn), Marketing, Beauty Coach LMS, Royalti 40%.</p>
+                  </div>
+                  <!-- Sub 2 -->
+                  <div class="border-b border-slate-800 pb-2">
+                    <div class="font-bold text-amber-400 flex justify-between">
+                      <span>2. Platinum Academy</span>
+                      <span>99 Jt/5 Thn</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Career Path, Academy System, SOP, Trainer Recruitment, LMS (1 Thn), Launch & Business Support.</p>
+                  </div>
+                  <!-- Sub 3 -->
+                  <div>
+                    <div class="font-bold text-amber-400 flex justify-between">
+                      <span>3. Beauty Hub (Mix)</span>
+                      <span>175 Jt/5 Thn</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Gabungan Salon + Academy System, Talent, Curriculum, Trainer, Recruitment, SOP & Launch Support.</p>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- Fullscreen Image Preview Modal (Ultra Simple & Clean) -->
+    <div id="fullscreenModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-md transition-all duration-300 p-2 sm:p-4 md:p-6" onclick="closeFullscreenImage()">
+      <div class="relative max-h-[96vh] max-w-full flex flex-col items-center" onclick="event.stopPropagation()">
+        <!-- Top Toolbar -->
+        <div class="w-full flex items-center justify-between text-white pb-3 px-2">
+          <span id="fullscreenImageTitle" class="text-sm sm:text-base font-bold text-white drop-shadow truncate pr-4">Brosur Produk</span>
+          <div class="flex items-center space-x-2">
+            <a id="fullscreenDownloadBtn" href="#" target="_blank" download class="p-2 rounded-full bg-white/15 hover:bg-white/30 text-white transition-colors" title="Buka gambar tab baru">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+            <button onclick="closeFullscreenImage()" class="p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Portrait Image Preview Container -->
+        <div class="overflow-hidden rounded-2xl shadow-2xl border border-white/10 max-h-[85vh] bg-black/40 flex items-center justify-center">
+          <img id="fullscreenImg" src="" alt="Fullscreen Preview" class="max-h-[85vh] w-auto object-contain rounded-2xl select-none" />
+        </div>
+
+        <p class="text-white/60 text-xs mt-3 flex items-center">
+          <i data-lucide="info" class="w-3.5 h-3.5 mr-1"></i> Klik di luar gambar atau tombol X untuk menutup
+        </p>
+      </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto bg-black/60 backdrop-blur-sm transition-all duration-300">
+      <div id="productModalCard" class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-pink-100 overflow-hidden relative transform transition-all scale-95 opacity-0 duration-200 my-auto">
+        <!-- Modal Header -->
+        <div class="px-6 sm:px-8 py-5 border-b border-gray-100 flex items-center justify-between bg-gradient-to-r from-pink-50/70 to-white sticky top-0 z-10">
+          <div class="flex items-center space-x-3">
+            <div id="modalIconBadge" class="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="package-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span id="modalCategoryBadge" class="text-xs font-bold uppercase tracking-wider text-primary">Partnership Plan</span>
+              <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold text-gray-900">Detail Produk</h3>
+            </div>
+          </div>
+          <button onclick="closeProductModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body Content (Dynamic) -->
+        <div id="modalBody" class="px-6 sm:px-8 py-6 overflow-y-auto space-y-6">
+          <!-- Content dynamically rendered via JS -->
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-6 sm:px-8 py-4 bg-gray-50 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 sticky bottom-0 z-10">
+          <p class="text-xs text-gray-500 text-center sm:text-left">Ada pertanyaan spesifik? Tim kami siap berdiskusi bersama Anda.</p>
+          <div class="flex items-center space-x-3 w-full sm:w-auto">
+            <button onclick="closeProductModal()" class="w-1/2 sm:w-auto px-5 py-2.5 rounded-xl border border-gray-300 text-gray-700 font-bold hover:bg-gray-100 transition-colors text-sm">
+              Tutup
+            </button>
+            <a id="modalCtaBtn" href="#contact" onclick="closeProductModal()" class="w-1/2 sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-bold hover:opacity-95 transition-opacity text-sm shadow-md text-center">
+              Daftar Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Achievements & Team -->
     <section id="team" class="py-20 bg-gray-50">
@@ -656,8 +850,9 @@
               <h3 class="text-2xl font-bold text-gray-900 mb-1">David Zoas</h3>
               <p class="text-primary font-semibold text-lg mb-4">CTO</p>
               <p class="text-gray-600 text-sm leading-relaxed">
-                MENGELOLA OPERASIONAL HARIAN ZBS<br />
-                MEMASTIKAN KUALITAS PELATIHAN TERJAGA
+                CERTIFIED AWS<br />
+                ALIBABA CLOUD COMPUTING,<br />
+                MORE THAN A DECADE OF EXPERIENCE IN INFORMATION & TECHNOLOGY
               </p>
             </div>
           </div>
@@ -866,6 +1061,327 @@
             });
           }
         });
+      });
+
+      // Product Details Data & Modal Logic
+      const productDetailsData = {
+        basic: {
+          badge: "Starter Tier",
+          title: "Basic Partnership",
+          price: "99K",
+          period: "/ tahun",
+          tagline: "Membership Salonkita Indonesia",
+          description: "Program kemitraan awal yang terjangkau untuk membangun koneksi ekosistem salon, penempatan talenta magang, serta peningkatan skill bisnis kecantikan Anda.",
+          sections: [
+            {
+              title: "Benefit Lengkap",
+              items: [
+                "Partner Penempatan Magang",
+                "Member of SKID Community",
+                "Beauty Business Webinar",
+                "Promosi salon gratis dari SKID",
+                "Menjadi Beauty Coach di LMS",
+                "Royalti Kelas Video 40%"
+              ]
+            }
+          ],
+          ctaText: "Daftar Basic Partnership Sekarang"
+        },
+        premium: {
+          badge: "",
+          title: "Premium Partnership",
+          price: "Rp 1,499 Jt",
+          period: "/ tahun",
+          tagline: "Solusi Manajemen Salon & Monetisasi Lengkap",
+          description: "Tingkatkan efisiensi operasional salon dengan POS Salon Management modern, promosi iklan gratis, serta monetisasi keahlian Anda melalui LMS.",
+          sections: [
+            {
+              title: "Benefit Lengkap",
+              items: [
+                "POS Salon Management (Sistem Kasir & Operasional)",
+                "Iklan Salon Gratis!",
+                "Partner Penempatan Magang",
+                "Member of SKID Community",
+                "Beauty Business Webinar Eksklusif",
+                "Jadi Beauty Coach LMS",
+                "Komisi / Royalti Kelas Video 40%"
+              ]
+            }
+          ],
+          ctaText: "Pilih Paket Premium Sekarang"
+        },
+        platinum: {
+          badge: "Enterprise Tier (3 Pilihan Spesialisasi)",
+          title: "Platinum Partnership",
+          price: "Mulai 99 Jt s/d 175 Jt",
+          period: "/ 5 Tahun",
+          tagline: "Solusi Skala Penuh untuk Salon, Academy, & Beauty Hub",
+          description: "Program kemitraan jangka panjang selama 5 tahun dengan dukungan sistem komprehensif, rekrutmen talenta & pelatih, kurikulum, serta pendampingan operasional & peluncuran.",
+          subProducts: [
+            {
+              name: "1. Platinum Salon Partnership",
+              badge: "Salon Focus",
+              price: "99 Jt / 5 Tahun",
+              highlight: "Peningkatan standar salon & operasional menyeluruh",
+              benefits: [
+                "Talent Recruitment",
+                "Training & Sertifikasi",
+                "SOP Service Standar Industri",
+                "POS / CRM (Berlaku 1 Tahun)",
+                "Customer Experience Enhancement",
+                "Marketing & Free Promosi untuk Salon Anda",
+                "Jadi Beauty Coach LMS",
+                "Komisi Video Pembelajaran 40%",
+                "Priority Book Now Access"
+              ]
+            },
+            {
+              name: "2. Platinum Academy",
+              badge: "Academy Focus",
+              price: "99 Jt / 5 Tahun",
+              highlight: "Skid Beauty Career Path & Sistem Lembaga Pelatihan",
+              benefits: [
+                "Skid Beauty Career Path",
+                "Academy System",
+                "Standard Operating Procedure (SOP)",
+                "Trainer Recruitment",
+                "Initial Preparation",
+                "Operational Support",
+                "Digital System (LMS) – Berlaku 1 Tahun",
+                "Launch Support & Business Support"
+              ]
+            },
+            {
+              name: "3. Platinum Beauty Hub (Mix)",
+              badge: "Ultimate Mix Solution",
+              price: "175 Jt / 5 Tahun",
+              highlight: "Bangun Bisnis Beauty yang Profesional Bersama SKID (Salon + Academy)",
+              benefits: [
+                "Solusi Terlengkap: Gabungan Salon System & Academy System",
+                "Talent & Trainer Recruitment",
+                "Curriculum Standardized",
+                "SOP Lengkap (Salon & Academy)",
+                "Launch Support & Mentoring Eksklusif"
+              ]
+            }
+          ],
+          ctaText: "Konsultasikan Kemitraan Platinum"
+        }
+      };
+
+      function openProductModal(type) {
+        const data = productDetailsData[type];
+        if (!data) return;
+
+        const modal = document.getElementById("productModal");
+        const modalCard = document.getElementById("productModalCard");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalCategoryBadge = document.getElementById("modalCategoryBadge");
+        const modalBody = document.getElementById("modalBody");
+        const modalCtaBtn = document.getElementById("modalCtaBtn");
+
+        modalTitle.textContent = data.title;
+        modalCategoryBadge.textContent = data.badge;
+        modalCtaBtn.textContent = data.ctaText;
+
+        let contentHtml = "";
+
+        if (type === "platinum") {
+          // Platinum with 3 sub products
+          contentHtml = `
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl border border-slate-700 mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 border border-amber-400/30 px-3 py-1 rounded-full">Periode 5 Tahun</span>
+              <h4 class="text-xl sm:text-2xl font-black mt-3 mb-1 text-white">${data.tagline}</h4>
+              <p class="text-slate-300 text-sm leading-relaxed">${data.description}</p>
+            </div>
+
+            <div class="space-y-6">
+              <h5 class="text-sm font-bold uppercase tracking-wider text-gray-500">Pilih Dari 3 Opsi Program Platinum:</h5>
+              
+              <div class="grid grid-cols-1 gap-5">
+                ${data.subProducts.map(sub => `
+                  <div class="bg-white border-2 border-pink-100 hover:border-primary/50 transition-all rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-100 pb-3 mb-4">
+                      <div>
+                        <span class="text-xs font-extrabold uppercase text-primary bg-primary/10 px-2.5 py-0.5 rounded-full inline-block mb-1">${sub.badge}</span>
+                        <h4 class="text-lg sm:text-xl font-bold text-gray-900">${sub.name}</h4>
+                        <p class="text-xs text-gray-500 font-medium">${sub.highlight}</p>
+                      </div>
+                      <div class="text-right sm:text-right">
+                        <span class="text-xl sm:text-2xl font-black text-gray-900 text-primary">${sub.price}</span>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      ${sub.benefits.map(b => `
+                        <div class="flex items-start space-x-2.5 text-sm text-gray-700">
+                          <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                          </div>
+                          <span class="leading-tight">${b}</span>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else {
+          // Basic & Premium modal
+          contentHtml = `
+            <div class="bg-pink-50/60 p-6 rounded-2xl border border-pink-100">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                ${data.badge ? `<span class="text-xs font-bold uppercase tracking-wider text-primary bg-white border border-primary/20 px-3 py-1 rounded-full inline-block w-fit">${data.badge}</span>` : '<span></span>'}
+                <div class="flex items-baseline">
+                  <span class="text-3xl font-extrabold text-gray-900">${data.price}</span>
+                  <span class="text-gray-500 text-sm font-semibold ml-1.5">${data.period}</span>
+                </div>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 mb-1">${data.tagline}</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">${data.description}</p>
+            </div>
+
+            <div>
+              <h5 class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Benefit & Keunggulan Program:</h5>
+              <div class="space-y-3">
+                ${data.sections[0].items.map(item => `
+                  <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-50 hover:bg-pink-50/50 border border-gray-100 transition-colors">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium text-sm leading-snug">${item}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        modalBody.innerHTML = contentHtml;
+        lucide.createIcons();
+
+        // Show modal animation
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => {
+          modalCard.classList.remove("scale-95", "opacity-0");
+          modalCard.classList.add("scale-100", "opacity-100");
+        }, 10);
+      }
+
+      function closeProductModal() {
+        const modal = document.getElementById("productModal");
+        const modalCard = document.getElementById("productModalCard");
+        if (!modal || !modalCard) return;
+
+        modalCard.classList.remove("scale-100", "opacity-100");
+        modalCard.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "auto";
+        }, 150);
+      }
+
+      // Platinum image sub-tab switcher
+      const platinumData = {
+        salon: {
+          img: "assets/platinum1.png",
+          fallback: "assets/gallery3.webp",
+          title: "Platinum Salon Partnership - 99 Jt / 5 Tahun",
+          badge: "1. Platinum Salon",
+          price: "99 Jt <span class=\"text-xs font-medium text-slate-400\">/ 5 Tahun</span>"
+        },
+        academy: {
+          img: "assets/platinum2.png",
+          fallback: "assets/gallery1.webp",
+          title: "Platinum Academy - 99 Jt / 5 Tahun",
+          badge: "2. Platinum Academy",
+          price: "99 Jt <span class=\"text-xs font-medium text-slate-400\">/ 5 Tahun</span>"
+        },
+        hub: {
+          img: "assets/platinum3.png",
+          fallback: "assets/gallery4.webp",
+          title: "Platinum Beauty Hub (Mix) - 175 Jt / 5 Tahun",
+          badge: "3. Beauty Hub (Mix)",
+          price: "175 Jt <span class=\"text-xs font-medium text-slate-400\">/ 5 Tahun</span>"
+        }
+      };
+
+      let currentPlatinumImg = platinumData.salon.img;
+      let currentPlatinumTitle = platinumData.salon.title;
+
+      function switchPlatinumTab(type) {
+        const item = platinumData[type];
+        if (!item) return;
+
+        currentPlatinumImg = item.img;
+        currentPlatinumTitle = item.title;
+
+        const imgEl = document.getElementById("platinumCardImg");
+        const badgeEl = document.getElementById("platinumImgBadge");
+        const priceEl = document.getElementById("platinumImgPrice");
+
+        if (imgEl) {
+          imgEl.src = item.img;
+          imgEl.onerror = function() {
+            this.onerror = null;
+            this.src = item.fallback;
+          };
+        }
+        if (badgeEl) badgeEl.textContent = item.badge;
+        if (priceEl) priceEl.innerHTML = item.price;
+
+        // Reset tabs style
+        ['salon', 'academy', 'hub'].forEach(t => {
+          const btn = document.getElementById(`btnTab${t.charAt(0).toUpperCase() + t.slice(1)}`);
+          if (btn) {
+            if (t === type) {
+              btn.className = "py-1.5 px-2 rounded-lg text-[11px] font-bold text-slate-900 bg-amber-400 transition-all text-center truncate";
+            } else {
+              btn.className = "py-1.5 px-2 rounded-lg text-[11px] font-bold text-slate-300 hover:text-white transition-all text-center truncate";
+            }
+          }
+        });
+      }
+
+      // Fullscreen Image Preview
+      function openFullscreenImage(imgSrc, title) {
+        const modal = document.getElementById("fullscreenModal");
+        const fullImg = document.getElementById("fullscreenImg");
+        const titleEl = document.getElementById("fullscreenImageTitle");
+        const downloadBtn = document.getElementById("fullscreenDownloadBtn");
+
+        if (!modal || !fullImg) return;
+
+        titleEl.textContent = title || "Brosur Produk";
+        fullImg.src = imgSrc;
+        if (downloadBtn) {
+          downloadBtn.href = imgSrc;
+        }
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+        lucide.createIcons();
+      }
+
+      function closeFullscreenImage() {
+        const modal = document.getElementById("fullscreenModal");
+        if (!modal) return;
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close fullscreen modal with Escape key
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeFullscreenImage();
+          closeProductModal();
+        }
       });
     </script>
   </body>
