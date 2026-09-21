@@ -1,0 +1,16 @@
+{
+  "name": "salonkita-company-profile",
+  "version": "1.0.0",
+  "description": "Salonkita Company Profile Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

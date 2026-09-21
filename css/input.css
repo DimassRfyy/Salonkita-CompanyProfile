@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base & Layout Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1024px) {
+  html {
+    zoom: 90%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #b72780 0%, #9a1f6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../assets/gallery4.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Navbar scroll effects */
+.navbar-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+.navbar-transparent .nav-link {
+  color: white;
+}
+
+.navbar-transparent .nav-link:hover {
+  color: #b72780;
+}
+
+.navbar-transparent .logo-text {
+  color: white;
+}
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(229, 231, 235, 1);
+}
+
+.navbar-scrolled .nav-link {
+  color: #4b5563;
+}
+
+.navbar-scrolled .nav-link:hover {
+  color: #b72780;
+}
+
+.navbar-scrolled .logo-text {
+  color: #111827;
+}
+
+/* Language Switcher Navbar Styles */
+.navbar-transparent .lang-switcher-wrap {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar-transparent .lang-btn-inactive {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-transparent .lang-btn-inactive:hover {
+  color: #ffffff;
+}
+
+.navbar-scrolled .lang-switcher-wrap {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.navbar-scrolled .lang-btn-inactive {
+  color: #64748b;
+}
+
+.navbar-scrolled .lang-btn-inactive:hover {
+  color: #0f172a;
+}
+
+.lang-btn-active {
+  background: #b72780 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
